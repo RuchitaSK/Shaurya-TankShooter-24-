@@ -13,11 +13,19 @@ onst Engine = Matter.Engine
 
 function setup() {
     // Setup the canvas, the ground the, tanker, the shooting ball and the bubble balls.
+    createCanvas(800,500);
+    engine = Engine.create();
+    world = engine.world;
+    tanker = new Tanker(50,400,100,100);
 
 }
 
 function draw() {
 // Remember to update the Matter Engine and set the background.
+
+background("lightblue");
+Engine.update(engine);
+tanker.display();
 }
 
 
